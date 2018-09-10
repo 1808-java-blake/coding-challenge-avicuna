@@ -20,11 +20,11 @@ stick lengths     length of cut     sticks before cut
 function solution(arr){
   let temp = arr;
   let len = arr.length;
-  let min = 0;
+  let min;
   let res = [];
   res.push(len);
   while(temp.length > 0){
-      min = +Math.min(temp);
+      min = Math.min.apply(null,temp);
       console.log(min);
       for(let i = 0; i < temp.length-1; i++){
           temp[i] = temp[i] - min;
